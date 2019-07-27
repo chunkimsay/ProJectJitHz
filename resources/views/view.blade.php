@@ -34,7 +34,7 @@
             <td>{{$product->product_price}}</td>
             <td>{{$product->product_size}}</td>
             <td>{{$product->product_colour}}</td>
-            <td>{{$product->product_typee}}</td>
+            <td>{{$product->product_type}}</td>
 
             <td><a href="{{ route('products.edit',$product->id)}}" class="btn btn-primary">Edit</a></td>
             <td>

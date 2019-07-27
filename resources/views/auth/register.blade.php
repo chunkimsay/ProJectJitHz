@@ -24,24 +24,6 @@
                                 @enderror
                             </div>
                         </div>
-
-
-                        <div class="form-group row">
-                            <label for="gedner" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="gender" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="gender" autofocus>
-
-                                @error('gender')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-
-
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -83,23 +65,10 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register as Admin') }}
-                                </button>
 
                             </div>
                         </div>
                     </form>
-
-
-                    <form method="POST" action="{{ route('product/create') }}">
-                        @csrf
-                        <button type="submit" class="btn btn-primary">
-                                    {{ __('Register as Admin') }}
-                                </button>
-                    </form>
-
-
                 </div>
             </div>
         </div>

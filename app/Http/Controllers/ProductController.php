@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 use App\Product;
 
 class ProductController extends Controller
@@ -29,7 +30,9 @@ class ProductController extends Controller
     {
         //return product
         return view('product');
-
+        $user = User::find([3,4]);
+        $product->users()->attach($user);
+        return 'Sucess';
     }
 
     /**
@@ -50,7 +53,7 @@ class ProductController extends Controller
      ]);
      $product = Product::create($validatedData);
 
-     return redirect('/product')->with('success', 'Your Product Added');
+     return redirect('/products')->with('success', 'Your Product Added');
     }
 
     /**

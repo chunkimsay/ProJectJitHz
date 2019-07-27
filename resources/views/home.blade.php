@@ -17,6 +17,7 @@
                 </div>
             </div>
         </div>
+        <button><a href="{{route('products.create') }}"">Create Product Now</a></button>
     </div>
 </div>
 @endsection
